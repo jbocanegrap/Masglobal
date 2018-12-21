@@ -1,0 +1,48 @@
+﻿@Model EmployeeDTO
+
+
+    @{
+        ViewBag.Title = "ViewEmployee";
+    }
+
+    <h2>ViewEmployee</h2>
+
+    <br />
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-condensed table-striped table-hover sortable">
+            @if (Model == null)
+            {
+                <tr>
+                    <td colspan="10">No Record's found.</td>
+                </tr>
+            }
+            else
+            {
+                <thead>
+                    <tr class="danger">
+                        <th data-defaultsign="_19"> Employee ID</th>
+                        <th data-defaultsign="AZ">Name</th>
+                        <th data-defaultsign="AZ">ContractTypeName</th>
+                        <th data-defaultsign="AZ">roleId</th>
+                        <th data-firstsort="desc">roleName</th>
+                        <th data-defaultsign="AZ">roleDescription</th>
+                        <th data-defaultsort="disabled">annualSalary</th>
+                    </tr>
+                </thead>
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.name</td>
+                        <td>@item.contractTypeName</td>
+                        <td>@item.roleId</td>
+                        <td>@item.roleName</td>
+                        <td>@item.roleDescription</td>
+                        <td>@item.annualSalary</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>View</h2>
+
+<form action="@Url.Action("Employees","Employee")" method="post">
+    <div class="form-group">
+        <label for="id">id employee:</label>
+        <input type="text" class="form-control" id="id" placeholder="Enter id employee" name="id">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
