@@ -24,10 +24,10 @@
                         <th data-defaultsign="_19"> Employee ID</th>
                         <th data-defaultsign="AZ">Name</th>
                         <th data-defaultsign="AZ">ContractTypeName</th>
-                        <th data-defaultsign="AZ">roleId</th>
-                        <th data-firstsort="desc">roleName</th>
-                        <th data-defaultsign="AZ">roleDescription</th>
-                        <th data-defaultsort="disabled">annualSalary</th>
+                        <th data-defaultsign="AZ">RoleId</th>
+                        <th data-defaultsign="AZ">RoleName</th>
+                        <th data-defaultsign="AZ">RoleDescription</th>
+                        <th data-defaultsort="disabled">AnnualSalary</th>
                     </tr>
                 </thead>
                 foreach (var item in Model)
@@ -39,7 +39,7 @@
                         <td>@item.roleId</td>
                         <td>@item.roleName</td>
                         <td>@item.roleDescription</td>
-                        <td>@item.annualSalary</td>
+                        <td>$@string.Format("{0:#,0.00}", item.annualSalary)</td>
                     </tr>
                 }
             }

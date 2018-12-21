@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+
 namespace Masglobal.Models
 {
     public class EmployeeDTO 
@@ -12,7 +14,7 @@ namespace Masglobal.Models
         public string roleName { get; set; }
         public string roleDescription { get; set; }
         public decimal hourlySalary { get; set; }
-        public decimal monthlySalary { get; set; }
+        public decimal monthlySalary { get; set; }        
         public decimal annualSalary { get => Salary(); set => Salary(); }
 
         private decimal Salary()
